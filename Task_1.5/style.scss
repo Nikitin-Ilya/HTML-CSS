@@ -6,30 +6,64 @@
   box-sizing: border-box;
 }
 
-h1 {
-  padding-top: 45vh;
-  color: #fff;
-  text-align: center;
-  text-shadow: 2px 2px 10px black;
+@mixin align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-div {
-  width: 100%;
+.wrapper{
+  perspective: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.text {
+  @include align-center;
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 2px 2px 10px black;
+  
+}
+
+.container {
+  height: 100vh;
+  transform-style: preserve-3d;
+  
+}
+
+.container:not(.autumn){
+  margin-bottom: 167px;
+}
+
+.parallax_layer{
+  height: 100vh;
+  position:absolute;
+  inset: 0;
+  @include align-center;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  transform: translateZ(-100px) scale(1.33);
   box-shadow: 0 -5px 20px black;
 }
 
-.winter {
+.winter > .background {
   background: url(./img/winter.jpg) center/cover no-repeat fixed;
 }
 
-.spring {
+.spring > .background {
   background: url(./img/spring.jpg) center/cover no-repeat fixed;
 }
 
-.summer {
+.summer > .background {
   background: url(./img/summer.jpg) center/cover no-repeat fixed;
 }
 
-.autumn {
+.autumn > .background {
   background: url(./img/autumn.jpg) center/cover no-repeat fixed;
 }
