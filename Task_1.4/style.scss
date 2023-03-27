@@ -1,0 +1,88 @@
+$backgroun-color: #1E1D1E;
+$hero-color: #FFC401;
+$checkpoint-color: #fff;
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: $backgroun-color;
+}
+
+.wrapper {
+  height: 200px;
+  width: 700px;
+  margin: 150px auto;
+  display: flex;
+  overflow: hidden; 
+}
+
+.checkpoint {
+  margin-top: 45px;
+  display: flex;
+  width: 100%;
+  animation: checkpoint 0.5s linear infinite;
+
+  &:before {
+    content: "";
+    background-color: $checkpoint-color;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+  }
+}
+
+.hero {
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    height: 0px;
+    width: 0px;
+  }
+
+  &::before {
+    animation: hero-mouth-top 0.5s ease infinite;
+    content: "";
+    border: 52px solid $hero-color;
+    border-right: 52px solid transparent;
+  }
+
+  &::after {
+    animation: hero-mouth-bottom 0.5s ease infinite;
+    border: 52px solid $hero-color;
+    border-right: 52px solid transparent;
+  }
+}
+
+@keyframes hero-mouth-top {
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes hero-mouth-bottom {
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes checkpoint {
+  0% {
+    transform: translate(50%);
+  }
+  100% {
+    transform: translate(-50%);
+  }
+}

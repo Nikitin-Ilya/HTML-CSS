@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1E1D1E;
+}
+
+.wrapper {
+  height: 200px;
+  width: 700px;
+  margin: 150px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.checkpoint {
+  margin-top: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-animation: checkpoint 0.5s linear infinite;
+          animation: checkpoint 0.5s linear infinite;
+}
+.checkpoint:before {
+  content: "";
+  background-color: #fff;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+.hero {
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+}
+.hero::before, .hero::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  height: 0px;
+  width: 0px;
+}
+.hero::before {
+  -webkit-animation: hero-mouth-top 0.5s ease infinite;
+          animation: hero-mouth-top 0.5s ease infinite;
+  content: "";
+  border: 52px solid #FFC401;
+  border-right: 52px solid transparent;
+}
+.hero::after {
+  -webkit-animation: hero-mouth-bottom 0.5s ease infinite;
+          animation: hero-mouth-bottom 0.5s ease infinite;
+  border: 52px solid #FFC401;
+  border-right: 52px solid transparent;
+}
+
+@-webkit-keyframes hero-mouth-top {
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@keyframes hero-mouth-top {
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+@-webkit-keyframes hero-mouth-bottom {
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+@keyframes hero-mouth-bottom {
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+@-webkit-keyframes checkpoint {
+  0% {
+    -webkit-transform: translate(50%);
+            transform: translate(50%);
+  }
+  100% {
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+}
+@keyframes checkpoint {
+  0% {
+    -webkit-transform: translate(50%);
+            transform: translate(50%);
+  }
+  100% {
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+}
