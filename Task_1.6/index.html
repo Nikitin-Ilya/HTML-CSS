@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Task 1.6</title>
+</head>
+<body>
+  <div class="wrapper">
+    <section class="nav">
+      <h1 class="nav__title">CSS documentation</h1>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="#block">Block</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#inline">Inline</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#inline-block">Inline-block</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#inline-table">Inline-table</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#list-item">List-item</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#none">None</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#run-in">Run-in</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#table">Table</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#table-caption">Table-caption</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#table-cell">Table-cell</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#table-column">Table-column</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#table-column-group">Table-column-group</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#table-footer-group">Table-footer-group</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#table-header-group">Table-header-group</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#table-row">Table-row</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#table-row-group">Table-row-group</a>
+        </li>
+      </ul>
+    </section>
+
+    <main class="articles">
+      <h2 id="block" class="articles__title">Block</h2>
+      <p class="articles__desc">
+        Элемент показывается как блочный. Применение этого значения для встроенных элементов, например тега &lt;span>, заставляет его вести подобно блокам — происходит перенос строк в начале и в конце содержимого.
+      </p>
+
+      <h2 id="inline" class="articles__title">Inline</h2>
+      <p class="articles__desc">
+        Элемент отображается как встроенный. Использование блочных тегов, таких как &lt;div> и &lt;p>, автоматически создает перенос и показывает содержимое этих тегов с новой строки. Значение inline отменяет эту особенность, поэтому содержимое блочных элементов начинается с того места, где окончился предыдущий элемент.
+      </p>
+
+      <h2 id="inline-block" class="articles__title">Inline-block</h2>
+      <p class="articles__desc">
+        Это значение генерирует блочный элемент, который обтекается другими элементами веб-страницы подобно встроенному элементу. Фактически такой элемент по своему действию похож на встраиваемые элементы (вроде тега &lt;img>). При этом его внутренняя часть форматируется как блочный элемент, а сам элемент — как встроенный.
+      </p>
+
+      <h2 id="inline-table" class="articles__title">Inline-table</h2>
+      <p class="articles__desc">
+        Определяет, что элемент является таблицей как при использовании тега &lt;table>, но при этом таблица является встроенным элементом и происходит ее обтекание другими элементами, например, текстом.
+      </p>
+
+      <h2 id="list-item" class="articles__title">List-item</h2>
+      <p class="articles__desc">
+        Элемент выводится как блочный и добавляется маркер списка.
+      </p>
+
+      <h2 id="none" class="articles__title">None</h2>
+      <p class="articles__desc">
+        Временно удаляет элемент из документа. Занимаемое им место не резервируется и веб-страница формируется так, словно элемента и не было. Изменить значение и сделать вновь видимым элемент можно с помощью скриптов, обращаясь к свойствам через объектную модель. В этом случае происходит переформатирование данных на странице с учетом вновь добавленного элемента.
+      </p>
+
+      <h2 id="run-in" class="articles__title">Run-in</h2>
+      <p class="articles__desc">
+        Устанавливает элемент как блочный или встроенный в зависимости от контекста.
+      </p>
+
+      <h2 id="table" class="articles__title">Table</h2>
+      <p class="articles__desc">
+        Определяет, что элемент является блочной таблицей подобно использованию тега &lt;table>.
+      </p>
+
+      <h2 id="table-caption" class="articles__title">Table-caption</h2>
+      <p class="articles__desc">
+        Задает заголовок таблицы подобно применению тега &lt;caption>.
+      </p>
+
+      <h2 id="table-cell" class="articles__title">Table-cell</h2>
+      <p class="articles__desc">
+        Указывает, что элемент представляет собой ячейку таблицы (тег &lt;td> или &lt;th>).
+      </p>
+
+      <h2 id="table-column" class="articles__title">Table-column</h2>
+      <p class="articles__desc">
+        Назначает элемент колонкой таблицы, словно был добавлен тег &lt;col>.
+      </p>
+
+      <h2 id="table-column-group" class="articles__title">Table-column-group</h2>
+      <p class="articles__desc">
+        Определяет, что элемент является группой одной или более колонок таблицы, как при использовании тега &lt;colgroup>.
+      </p>
+
+      <h2 id="table-footer-group" class="articles__title">Table-footer-group</h2>
+      <p class="articles__desc">
+        Используется для хранения одной или нескольких строк ячеек, которые отображаются в самом низу таблицы. По своему действию сходно с работой тега &lt;tfoot>.
+      </p>
+
+      <h2 id="table-header-group" class="articles__title">Table-header-group</h2>
+      <p class="articles__desc">
+        Элемент предназначен для хранения одной или нескольких строк ячеек, которые представлены вверху таблицы. По своему действию сходно с работой тега &lt;thead>.
+      </p>
+
+      <h2 id="table-row" class="articles__title">Table-row</h2>
+      <p class="articles__desc">
+        Элемент отображается как строка таблицы (тег &lt;tr>).
+      </p>
+
+      <h2 id="table-row-group" class="articles__title">Table-row-group</h2>
+      <p class="articles__desc">
+        Создает структурный блок, состоящий из нескольких строк таблицы аналогично действию тега &lt;tbody>.
+      </p>
+    </main>
+
+  </div>
+</body>
+</html>
