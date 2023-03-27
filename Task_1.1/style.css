@@ -1,0 +1,70 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container {
+  max-width: 1230px;
+  padding: 50px;
+  background-color: #efefef;
+}
+.header {
+  text-align: center;
+}
+.header__name {
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.description {
+  border: 1px solid #dfdfdf;
+  padding: 10px;
+}
+
+.foto {
+  margin-top: 20px;
+  border: 1px solid #dfdfdf;
+  padding: 10px;
+  
+}
+
+.foto img{
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.foto__description {
+  width: 100%;
+  height: 50px;
+  background-color: #DEDEDE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline {
+  margin-top: 50px;
+}
+
+.timeline__title{
+  font-weight: bold;
+}
+
+.timeline__list{
+  line-height: 25px;
+}
+
+.timeline__list span{
+  font-weight: bold;
+}
+
+.footer__text{
+  font-style: italic;
+  text-align: center;
+}
